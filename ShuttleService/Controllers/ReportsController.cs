@@ -59,19 +59,10 @@ namespace ShuttleService.Controllers
                _dbServer = "192.168.30.156";//calaca dev
             }
             //else if (System.Environment.MachineName == "SODIUM2" || System.Environment.MachineName == "WSD2095") //JPT commented code 
-            else if (System.Environment.MachineName == "SODIUM2" || System.Environment.MachineName == "WSN1243" || System.Environment.MachineName == "" || 
-                System.Environment.MachineName == "CRONUS" || System.Environment.MachineName == "WSN1622") //JPT additional code
+            else if (System.Environment.MachineName == "SODIUM2" || System.Environment.MachineName == "WSN1263") //JPT additional code
             {
-                if (System.Environment.MachineName == "CRONUS" || System.Environment.MachineName == "WSN1622")
-                {
-                    _dbName = "ShuttleReservationDB";//test
-                    _dbServer = "192.168.0.229";//test
-                }
-                else
-                {
-                    _dbName = "ShuttleReservationDB_LiveCopy";//test
-                    _dbServer = "192.168.70.102";//test
-                } 
+                _dbName = "ShuttleReservationTest2"; // Makati Test
+                _dbServer = "192.168.70.231"; // Makati Test
                 
             }
             else
