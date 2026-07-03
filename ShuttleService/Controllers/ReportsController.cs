@@ -791,22 +791,40 @@ namespace ShuttleService.Controllers
 
             List<ReportService.ReportDataSet> reportDataSets = new List<ReportDataSet>();
 
+            //ReportService.ReportDataSet SQLQueryDataset = new ReportDataSet
+            //{
+            //    DataSetName = "vDriverTripCounts",
+            //    SQLQuery = $" Exec GetDriverCounts_New @StartDate = '{_start}', @EndDate = '{_end}', @CompanyGroupId = {_companyGroupId}"
+            //};
+
+            //ReportService.ReportDataSet SQLQueryDataset2 = new ReportDataSet
+            //{
+            //    DataSetName = "GetTripVehicleCounts",
+            //    SQLQuery = $" Exec [GetTripVehicleCounts_DriverVehicle_New] @StartDate = '{_start}', @EndDate = '{_end}', @CompanyGroupId = {_companyGroupId}"
+            //};
+
+            //ReportService.ReportDataSet SQLQueryDataset3 = new ReportDataSet
+            //{
+            //    DataSetName = "GetDriverCounts_DriverVehicle_Monthly",
+            //    SQLQuery = $" Exec [GetDriverCounts_DriverVehicle_Monthly_New] @StartDate = '{_start}', @EndDate = '{_end}', @CompanyGroupId = {_companyGroupId}"
+            //};
+
             ReportService.ReportDataSet SQLQueryDataset = new ReportDataSet
             {
                 DataSetName = "vDriverTripCounts",
-                SQLQuery = $" Exec GetDriverCounts_New @StartDate = '{_start}', @EndDate = '{_end}', @CompanyGroupId = {_companyGroupId}"
+                SQLQuery = " Exec GetDriverCounts @StartDate = '" + _start + "', @EndDate = '" + _end + "'"
             };
 
             ReportService.ReportDataSet SQLQueryDataset2 = new ReportDataSet
             {
                 DataSetName = "GetTripVehicleCounts",
-                SQLQuery = $" Exec [GetTripVehicleCounts_DriverVehicle_New] @StartDate = '{_start}', @EndDate = '{_end}', @CompanyGroupId = {_companyGroupId}"
+                SQLQuery = " Exec [GetTripVehicleCounts_DriverVehicle] @StartDate = '" + _start + "', @EndDate = '" + _end + "'"
             };
 
             ReportService.ReportDataSet SQLQueryDataset3 = new ReportDataSet
             {
                 DataSetName = "GetDriverCounts_DriverVehicle_Monthly",
-                SQLQuery = $" Exec [GetDriverCounts_DriverVehicle_Monthly_New] @StartDate = '{_start}', @EndDate = '{_end}', @CompanyGroupId = {_companyGroupId}"
+                SQLQuery = " Exec [GetDriverCounts_DriverVehicle_Monthly] @StartDate = '" + _start + "', @EndDate = '" + _end + "'"
             };
 
             ReportService.ReportDataSet SQLQueryDataset4 = new ReportDataSet
@@ -867,22 +885,40 @@ namespace ShuttleService.Controllers
 
             List<ReportService.ReportDataSet> reportDataSets = new List<ReportDataSet>();
 
+            //ReportService.ReportDataSet SQLQueryDataset = new ReportDataSet
+            //{
+            //    DataSetName = "vDriverTripCounts",
+            //    SQLQuery = $" Exec GetShuttleCounts_New @StartDate = '{_start}', @EndDate = '{_end}', @CompanyGroupId = {_companyGroupId}"
+            //};
+
+            //ReportService.ReportDataSet SQLQueryDataset2 = new ReportDataSet
+            //{
+            //    DataSetName = "GetTripVehicleCounts",
+            //    SQLQuery = $" Exec [GetTripVehicleCounts_Shuttle_New] @StartDate = '{_start}', @EndDate = '{_end}', @CompanyGroupId = {_companyGroupId}"
+            //};
+
+            //ReportService.ReportDataSet SQLQueryDataset3 = new ReportDataSet
+            //{
+            //    DataSetName = "GetDriverCounts_DriverVehicle_Monthly",
+            //    SQLQuery = $" Exec [GetShuttleCounts_Monthly_New] @StartDate = '{_start}', @EndDate = '{_end}', @CompanyGroupId = {_companyGroupId}"
+            //};
+
             ReportService.ReportDataSet SQLQueryDataset = new ReportDataSet
             {
                 DataSetName = "vDriverTripCounts",
-                SQLQuery = $" Exec GetShuttleCounts_New @StartDate = '{_start}', @EndDate = '{_end}', @CompanyGroupId = {_companyGroupId}"
+                SQLQuery = " Exec GetShuttleCounts @StartDate = '" + _start + "', @EndDate = '" + _end + "'"
             };
 
             ReportService.ReportDataSet SQLQueryDataset2 = new ReportDataSet
             {
                 DataSetName = "GetTripVehicleCounts",
-                SQLQuery = $" Exec [GetTripVehicleCounts_Shuttle_New] @StartDate = '{_start}', @EndDate = '{_end}', @CompanyGroupId = {_companyGroupId}"
+                SQLQuery = " Exec [GetTripVehicleCounts_Shuttle] @StartDate = '" + _start + "', @EndDate = '" + _end + "'"
             };
 
             ReportService.ReportDataSet SQLQueryDataset3 = new ReportDataSet
             {
                 DataSetName = "GetDriverCounts_DriverVehicle_Monthly",
-                SQLQuery = $" Exec [GetShuttleCounts_Monthly_New] @StartDate = '{_start}', @EndDate = '{_end}', @CompanyGroupId = {_companyGroupId}"
+                SQLQuery = " Exec [GetShuttleCounts_Monthly] @StartDate = '" + _start + "', @EndDate = '" + _end + "'"
             };
 
             ReportService.ReportDataSet SQLQueryDataset4 = new ReportDataSet
@@ -943,16 +979,28 @@ namespace ShuttleService.Controllers
 
             List<ReportService.ReportDataSet> reportDataSets = new List<ReportDataSet>();
 
+            //ReportService.ReportDataSet SQLQueryDataset = new ReportDataSet
+            //{
+            //    DataSetName = "GetCounts_Monthly",
+            //    SQLQuery = $" Exec GetCounts_Monthly_New @StartDate = '{_start}', @EndDate = '{_end}', @CompanyGroupId = {_companyGroupId}"
+            //};
+
+            //ReportService.ReportDataSet SQLQueryDataset2 = new ReportDataSet
+            //{
+            //    DataSetName = "GetTripVehicleCounts",
+            //    SQLQuery = $" Exec [GetTripVehicleCounts_Union_New] @StartDate = '{_start}', @EndDate = '{_end}', @CompanyGroupId = {_companyGroupId}"
+            //};
+
             ReportService.ReportDataSet SQLQueryDataset = new ReportDataSet
             {
                 DataSetName = "GetCounts_Monthly",
-                SQLQuery = $" Exec GetCounts_Monthly_New @StartDate = '{_start}', @EndDate = '{_end}', @CompanyGroupId = {_companyGroupId}"
+                SQLQuery = " Exec GetCounts_Monthly @StartDate = '" + _start + "', @EndDate = '" + _end + "'"
             };
 
             ReportService.ReportDataSet SQLQueryDataset2 = new ReportDataSet
             {
                 DataSetName = "GetTripVehicleCounts",
-                SQLQuery = $" Exec [GetTripVehicleCounts_Union_New] @StartDate = '{_start}', @EndDate = '{_end}', @CompanyGroupId = {_companyGroupId}"
+                SQLQuery = " Exec [GetTripVehicleCounts_Union] @StartDate = '" + _start + "', @EndDate = '" + _end + "'"
             };
             ReportService.ReportDataSet SQLQueryDataset4 = new ReportDataSet
             {
@@ -1011,29 +1059,54 @@ namespace ShuttleService.Controllers
 
             List<ReportService.ReportDataSet> reportDataSets = new List<ReportDataSet>();
 
+            //ReportService.ReportDataSet SQLQueryDataset = new ReportDataSet
+            //{
+            //    DataSetName = "GetTripChargingCompanies_Union",
+            //    SQLQuery = $" Exec GetTripChargingCompanies_Union_New @StartDate = '{_start}', @EndDate = '{_end}', @CompanyGroupId = {_companyGroupId}"
+            //};
+
+            //ReportService.ReportDataSet SQLQueryDataset1 = new ReportDataSet
+            //{
+            //    DataSetName = "GetTripChargingDepartmentByCompanies_Union_Ranked1",
+            //    SQLQuery = $" Exec [GetTripChargingDepartmentByCompanies_Union_Ranked1_New] @StartDate = '{_start}', @EndDate = '{_end}', @CompanyGroupId = {_companyGroupId}"
+            //};
+
+            //ReportService.ReportDataSet SQLQueryDataset2 = new ReportDataSet
+            //{
+            //    DataSetName = "GetTripChargingDepartmentByCompanies_Union_Ranked2",
+            //    SQLQuery = $" Exec [GetTripChargingDepartmentByCompanies_Union_Ranked2_New] @StartDate = '{_start}', @EndDate = '{_end}', @CompanyGroupId = {_companyGroupId}"
+            //};
+
+            //ReportService.ReportDataSet SQLQueryDataset3 = new ReportDataSet
+            //{
+            //    DataSetName = "GetTripChargingDepartmentByCompanies_Union_Ranked3",
+            //    SQLQuery = $" Exec [GetTripChargingDepartmentByCompanies_Union_Ranked3_New] @StartDate = '{_start}', @EndDate = '{_end}', @CompanyGroupId = {_companyGroupId}"
+            //};
+
             ReportService.ReportDataSet SQLQueryDataset = new ReportDataSet
             {
                 DataSetName = "GetTripChargingCompanies_Union",
-                SQLQuery = $" Exec GetTripChargingCompanies_Union_New @StartDate = '{_start}', @EndDate = '{_end}', @CompanyGroupId = {_companyGroupId}"
+                SQLQuery = " Exec GetTripChargingCompanies_Union @StartDate = '" + _start + "', @EndDate = '" + _end + "'"
             };
 
             ReportService.ReportDataSet SQLQueryDataset1 = new ReportDataSet
             {
                 DataSetName = "GetTripChargingDepartmentByCompanies_Union_Ranked1",
-                SQLQuery = $" Exec [GetTripChargingDepartmentByCompanies_Union_Ranked1_New] @StartDate = '{_start}', @EndDate = '{_end}', @CompanyGroupId = {_companyGroupId}"
+                SQLQuery = " Exec [GetTripChargingDepartmentByCompanies_Union_Ranked1] @StartDate = '" + _start + "', @EndDate = '" + _end + "'"
             };
 
             ReportService.ReportDataSet SQLQueryDataset2 = new ReportDataSet
             {
                 DataSetName = "GetTripChargingDepartmentByCompanies_Union_Ranked2",
-                SQLQuery = $" Exec [GetTripChargingDepartmentByCompanies_Union_Ranked2_New] @StartDate = '{_start}', @EndDate = '{_end}', @CompanyGroupId = {_companyGroupId}"
+                SQLQuery = " Exec [GetTripChargingDepartmentByCompanies_Union_Ranked2] @StartDate = '" + _start + "', @EndDate = '" + _end + "'"
             };
 
             ReportService.ReportDataSet SQLQueryDataset3 = new ReportDataSet
             {
                 DataSetName = "GetTripChargingDepartmentByCompanies_Union_Ranked3",
-                SQLQuery = $" Exec [GetTripChargingDepartmentByCompanies_Union_Ranked3_New] @StartDate = '{_start}', @EndDate = '{_end}', @CompanyGroupId = {_companyGroupId}"
+                SQLQuery = " Exec [GetTripChargingDepartmentByCompanies_Union_Ranked3] @StartDate = '" + _start + "', @EndDate = '" + _end + "'"
             };
+
             ReportService.ReportDataSet SQLQueryDataset4 = new ReportDataSet
             {
                 DataSetName = "filterQuery",
@@ -1093,10 +1166,16 @@ namespace ShuttleService.Controllers
 
             List<ReportService.ReportDataSet> reportDataSets = new List<ReportDataSet>();
 
+            //ReportService.ReportDataSet SQLQueryDataset = new ReportDataSet
+            //{
+            //    DataSetName = "vOutsideMMTrips",
+            //    SQLQuery = $" select * from vOutsideMMTrips_New where TRY_CAST(TripDate AS DATE) >= '{_start}' and TRY_CAST(TripDate AS DATE) <= '{_end}' and CompanyGroupId = {_companyGroupId}"
+            //};
+
             ReportService.ReportDataSet SQLQueryDataset = new ReportDataSet
             {
                 DataSetName = "vOutsideMMTrips",
-                SQLQuery = $" select * from vOutsideMMTrips_New where TRY_CAST(TripDate AS DATE) >= '{_start}' and TRY_CAST(TripDate AS DATE) <= '{_end}' and CompanyGroupId = {_companyGroupId}"
+                SQLQuery = " select * from vOutsideMMTrips where TripDate >= '" + _start + "' and TripDate <= '" + _end + "'"
             };
 
             ReportService.ReportDataSet SQLQueryDataset4 = new ReportDataSet
@@ -1158,10 +1237,16 @@ namespace ShuttleService.Controllers
 
             List<ReportService.ReportDataSet> reportDataSets = new List<ReportDataSet>();
 
+            //ReportService.ReportDataSet SQLQueryDataset = new ReportDataSet
+            //{
+            //    DataSetName = "vSurveyResults",
+            //    SQLQuery = $" select * from vSurveyResults_New where QuarterNo = '{_q}' and YearNo = '{_y}' and CompanyGroupId = '{_companyGroupId}'"
+            //};
+
             ReportService.ReportDataSet SQLQueryDataset = new ReportDataSet
             {
                 DataSetName = "vSurveyResults",
-                SQLQuery = $" select * from vSurveyResults_New where QuarterNo = '{_q}' and YearNo = '{_y}' and CompanyGroupId = '{_companyGroupId}'"
+                SQLQuery = " select * from vSurveyResults where QuarterNo = '" + _q + "' and YearNo = '" + _y + "'  "
             };
 
             ReportService.ReportDataSet SQLQueryDataset4 = new ReportDataSet
@@ -1220,10 +1305,16 @@ namespace ShuttleService.Controllers
 
             List<ReportService.ReportDataSet> reportDataSets = new List<ReportDataSet>();
 
+            //ReportService.ReportDataSet SQLQueryDataset = new ReportDataSet
+            //{
+            //    DataSetName = "GetSurveyResultsPerDriver",
+            //    SQLQuery = $" Exec [GetSurveyResultsPerDriver_New] @Quarter = '{_q}', @Year = '{_y}', @CompanyGroupId = {_companyGroupId}"
+            //};
+
             ReportService.ReportDataSet SQLQueryDataset = new ReportDataSet
             {
                 DataSetName = "GetSurveyResultsPerDriver",
-                SQLQuery = $" Exec [GetSurveyResultsPerDriver_New] @Quarter = '{_q}', @Year = '{_y}', @CompanyGroupId = {_companyGroupId}"
+                SQLQuery = " Exec [GetSurveyResultsPerDriver] @Quarter = '" + _q + "', @Year = '" + _y + "'"
             };
 
             ReportService.ReportDataSet SQLQueryDataset4 = new ReportDataSet
