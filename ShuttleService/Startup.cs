@@ -90,6 +90,13 @@ namespace ShuttleService
         // Configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            // Add CSP headers middleware
+            app.Use(async (context, next) =>
+            {
+                context.Response.Headers.Add("Content-Security-Policy", "script-src 'unsafe-inline'; style-src 'unsafe-inline';");
+                await next();
+            });
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

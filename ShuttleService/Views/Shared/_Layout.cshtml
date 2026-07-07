@@ -450,7 +450,10 @@
                                         <li><a asp-area="" asp-controller="Location" asp-action="LocationMaintenance" class="nav-link"><span class="fa fa-map-marker"></span> &nbsp;Location List</a></li>
                                     }
                                     <li><a asp-area="" asp-controller="OriginDestination" asp-action="OriginDestinationMaintenance" class="nav-link"><span class="fa fa-map-marker"></span> &nbsp;Origin & Destination List</a></li>
-                                    <li><a asp-area="" asp-controller="Parcel" asp-action="ParcelCategory" class="nav-link"><span class="fa fa-file"></span> &nbsp;Parcel Category List</a></li>
+                                    @if (companyGroup == "SMPC")
+                                    {
+                                        <li><a asp-area="" asp-controller="Parcel" asp-action="ParcelCategory" class="nav-link"><span class="fa fa-file"></span> &nbsp;Parcel Category List</a></li>
+                                    }
                                     <li role="separator" class="divider"></li>
                                     <li><a asp-area="" asp-controller="CompanyLists" asp-action="Index" class="nav-link"><span class="fa fa-building"></span> &nbsp;Company List</a></li>
                                     <li><a asp-area="" asp-controller="DepartmentLists" asp-action="Index" class="nav-link"><span class="fa fa-building"></span> &nbsp;Department List</a></li>
@@ -488,14 +491,14 @@
 
                             <li>
                                 <a>
-                                    <i class="fa fa-newspaper"></i>  @fullname
+                                    <i class="fa fa-user"></i>  @fullname
                                 </a>
                             </li>
-                            <li>
+                           @*  <li>
                                 <a>
                                     <i class="fa fa-user"></i> @_location
                                 </a>
-                            </li>
+                            </li> *@
 
                             <li>
                                 <a href="@Url.Content("~/Accounts/Logout")">

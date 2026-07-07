@@ -61,9 +61,9 @@ namespace ShuttleService.Controllers
             //else if (System.Environment.MachineName == "SODIUM2" || System.Environment.MachineName == "WSD2095") //JPT commented code 
             else if (System.Environment.MachineName == "SODIUM2" || System.Environment.MachineName == "WSN1263") //JPT additional code
             {
-                _dbName = "ShuttleReservationTest2"; // Makati Test
-                _dbServer = "192.168.70.231"; // Makati Test
-                
+                _dbName = "ShuttleReservationDB_UPDI"; // UPDI Test
+                _dbServer = "192.168.70.231"; // UPDI Test
+
             }
             else
             {
@@ -74,8 +74,8 @@ namespace ShuttleService.Controllers
                 }
                 else
                 {
-                    _dbName = "ShuttleReservationDB"; //Makati Live
-                    _dbServer = "192.168.70.102"; //Makati Live
+                    _dbName = "ShuttleReservationDB_UPDI"; //UPDI Live
+                    _dbServer = "192.168.70.102"; //UPDI Live
                 }
                 
             }
