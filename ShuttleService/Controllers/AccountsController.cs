@@ -1109,7 +1109,8 @@ namespace ShuttleService.Controllers
 
 
             MailMessage mail = new MailMessage();
-            SmtpClient SmtpServer = new SmtpClient("mail.hoaccess.com");
+            //SmtpClient SmtpServer = new SmtpClient("mail.hoaccess.com");
+            SmtpClient SmtpServer = new SmtpClient("relay.smcdacon.com");
             mail.From = new MailAddress("webhelpdeskadmin@semirarampc.com", "Transport Hub System");
             mail.To.Add(forgotPasswordModel.Email);
             mail.Subject = "RESET PASSWORD - TRANSPORT HUB SYSTEM";

@@ -10,6 +10,7 @@ using ShuttleService.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using System.Linq.Dynamic.Core;
 
 namespace ShuttleService.Controllers
 {
@@ -91,7 +92,7 @@ namespace ShuttleService.Controllers
             //var CompanyGroupList = _context.CompanyGroup.Where(m => m.Id == currentCompanyGroupId).OrderBy(m => m.Id).ToList();
             //ViewData["CompanyGroupId"] = new SelectList(CompanyGroupList, "Id", "CompanyGroupName");
 
-            var CompanyGroupList = _context.CompanyGroup.OrderBy(m => m.Id).ToList();
+            var CompanyGroupList = _context.CompanyGroup.Where(m => m.CompanyGroupName == "UPDI").ToList();
             ViewData["CompanyGroupId"] = new SelectList(CompanyGroupList, "Id", "CompanyGroupName");
 
             var LocationList = _context.Location.OrderBy(m => m.Id).ToList();
